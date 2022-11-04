@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "16684157-0bd7-4447-8a4a-8c91afad03c0",
+		"name": "book-store-quarkus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15675598"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"game\":\"God of war Ragnarok\",\"description\":\"Continuacion de God of war 4, seguimos \r\nlas aventuras de astreus y kratos\",\r\n \"genre\": \"action and adventure\", \r\n\"developer\":\"Santa Monica Studio\",\"publisher\":\"Sony Interactive Entertainment\",\r\n \"price\": \"70.00\""
+				},
+				"url": {
+					"raw": "https://{{host}}/restapi/games",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restapi",
+						"games"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"game\":\"Fortnite\",\"description\":\"Juego de batalla campal donde el ultimo vivo es el que gana\",\r\n \"genre\": \"Battle Royale\", \r\n\"developer\":\"Epic Games\",\"publisher\":\"Epic Games\",\r\n \"price\": \"0.0\"}"
+				},
+				"url": {
+					"raw": "https://{{host}}/restapi/games",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restapi",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://{{host}}/restapi/games/",
+					"protocol": "https",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"restapi",
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
