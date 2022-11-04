@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 
 @RequestScoped
-@Path("books")
+@Path("games")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class BookStoreEndpoint {
@@ -42,13 +42,13 @@ public class BookStoreEndpoint {
     public Response update(@PathParam("id") Long id, Book book) {
         Book updateBook = bookService.findById(id);
 
-        updateBook.setIsbn(book.getIsbn());
+        updateBook.setGame(book.getGame());
         updateBook.setDescription(book.getDescription());
-        updateBook.setLanguage(book.getLanguage());
-        updateBook.setPages(book.getPages());
+        updateBook.setGenre(book.getGenre());
+        updateBook.setDeveloper(book.getDeveloper());
         updateBook.setPrice(book.getPrice());
         updateBook.setPublisher(book.getPublisher());
-        updateBook.setTitle(book.getTitle());
+
 
         bookService.update(updateBook);
 

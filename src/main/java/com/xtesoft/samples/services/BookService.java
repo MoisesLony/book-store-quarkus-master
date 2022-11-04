@@ -15,7 +15,7 @@ public class BookService {
     EntityManager em;
 
     public List<Book> getAll() {
-        List<Book> books = em.createNamedQuery("Book.findAll", Book.class).getResultList();
+        List<Book> books = em.createNamedQuery("Games.findAll", Book.class).getResultList();
         return books != null ? books : new ArrayList<>();
     }
 
